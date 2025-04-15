@@ -1,0 +1,40 @@
+class  s137
+{
+	public static void main(String[] args) 
+	{
+		int row=5;
+		int noSpace=0;
+		int noChar=row;	
+		//char ch='C';
+		for(int i=0;i<row;i++)
+		{
+			char ch=(char)('A'+noChar/2);
+			for(int j=0;j<noSpace;j++)
+			{
+				System.out.print(' ');
+			}
+			for(int k=0;k<noChar;k++)
+			{
+				System.out.print(ch);
+				if(k<noChar/2)
+					ch--;
+				else
+					ch++;
+			}
+			System.out.println();
+			if(i<row/2)
+			{
+				noSpace++;
+				noChar-=2;
+				//ch=(char)(ch-2);
+			
+			}
+			else
+			{
+				noSpace--;
+				noChar+=2;
+			
+			}
+		}
+	}
+}
